@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/bootstrap.css">
+    <link rel="stylesheet" href="./styles/mystyle.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>The Fashion Pet</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="register.html">Register</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Register a new pet</h2>
+        <div class="form-container">
+            <div class="mb-3"></div>
+            <label>Name:</label>
+            <input class="form-control" type="text" id="txtName"/>
+        </div>
+        <div class="mb-3">
+            <label>Age:</label>
+            <input class="form-control" type="number" id="textAge" min="0"/>
+        </div>
+        <div class="mb-3">
+            <label>Gender:</label>
+            <select class="form-control" id="txtGender">
+                <option value="" disabled selected>-- Select a Gender --</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label>Breed:</label>
+            <input class="form-control" type="text" id="txtBreed" />
+        </div>
+        <div class="mb-3">
+            <label>Services:</label>
+            <select class="form-control" id="txtService">
+                <option value="" disabled selected>-- Select a Service --</option>
+                <option value="Wash">Wash</option>
+                <option value="Cut">Cut</option>
+                <option value="Color">Color</option>
+            </select>
+        </div>
+        <div>
+            <button class="btn btn-outline-primary" onclick="init()">Register</button>
+        </div>
+
+        <div id="info">
+        </div>
+
+        <div>
+            <h2>Registered Pets</h2>
+            <div class="container row" id="petList">
+
+            </div>
+        </div>
+    </main>
+
+    <script src="/Scripts/display.js"></script>
+    <script src="./Scripts/register.js"></script>
+</body>
+</html>
