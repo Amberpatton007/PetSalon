@@ -7,15 +7,25 @@
     <link rel="stylesheet" href="./styles/mystyle.css">
     <title>Document</title>
 </head>
-<body>
+<body style="background-color:gold;text-align:center" id="borderimg">
     <header>
-        <h1>The Fashion Pet.</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="services.html">Services</a>
-            <a href="register.html">Register</a>
-        </nav>
-    </header>
+        <h1>Pets~R~Us</h1>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">Pets-R-Us</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    <a class="nav-link" href="register.html">Register</a>
+                    <a class="nav-link" href="services.html">Services</a>
+                    </div>
+                </div>
+                </div>
+            </nav>
+        </header>
     <main class="container">
         <h2>Register a new pet</h2>
         <div class="form-container">
@@ -48,6 +58,7 @@
                 <option value="Color">Color</option>
             </select>
         </div>
+
         <div>
             <button class="btn btn-outline-primary" onclick="register()">Register</button>
         </div>
@@ -65,18 +76,18 @@
             <div class="container">
                 <table class="table">
                     <thead>
-                      <tr>
-                        <th scope="col">Name</th>
-                        <th scope="col">Age</th>
-                        <th scope="col">Gender</th>
-                        <th scope="col">Breed</th>
-                        <th scope="col">Service</th>
-                      </tr>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Age</th>
+                            <th scope="col">Gender</th>
+                            <th scope="col">Breed</th>
+                            <th scope="col">Service</th>
+                            <th scope="col">Remove/Edit</th>
+                        </tr>
                     </thead>
-                    <tbody id="pets">
-                   
-                    </tbody>
-                  </table>
+                <tbody id="pets">
+                </tbody>
+                </table>
             </div>
         </div>
     </main>

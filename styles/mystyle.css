@@ -1,4 +1,30 @@
-.card{
-    background-color: aqua;
+body{
+    font-family: Georgia;
+    text-decoration-color: chocolate;
+}
+
+
+*{background-color: gold;}
+
+.header{
+    background-image:url("header-or-footer.jpg")
+}
+
+h1, h2, label, option{color: chocolate;}
+
+
+#borderimg{
+    border: 30px solid transparent;
+    padding: 15px;
+    border-image: url(./pet-photos/border-Edited.jpg) 50% round;
+}
+
+.pic1{
+    display: flex center;
+    margin: 40px;
+    border: 10px solid chocolate;
     
+
+
+
 }
