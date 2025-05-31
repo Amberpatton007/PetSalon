@@ -13,7 +13,7 @@ body{
 h1, h2, label, option{color: chocolate;}
 
 
-#borderimg{
+.borderimg{
     border: 30px solid transparent;
     padding: 15px;
     border-image: url(./pet-photos/border-Edited.jpg) 50% round;

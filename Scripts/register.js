@@ -79,7 +79,7 @@ function init(){
     console.log(pets);
 
     displayInfo();
-    displayRow();
+   // displayRow();
     displayPets();
 }
 
