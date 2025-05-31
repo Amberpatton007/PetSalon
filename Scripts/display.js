@@ -11,7 +11,7 @@ function displayPets(){
                 <td>${pets[i].age}</td>
                 <td>${pets[i].gender}</td>
                 <td>${pets[i].breed}</td>
-                <td><button class="btn btn-danger btn-sm" onclick="deletePet(${i})">Delete</button</td>
+                <td><button class="btn btn-danger btn-sm"> onclick="deletePet(${i})">Delete</button</td>
             </tr>`
         
        // card+=`<p>${pets[i].name}</p>`;
