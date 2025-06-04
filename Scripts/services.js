@@ -6,18 +6,18 @@ let inputColor=document.getElementById("txtColor");
 
 function Service(wash, cut, color){
     this.wash=wash;
-    this.cut-cut;
+    this.cut=cut;
     this.color=color;
 }
 
 function selectedServiceReg(){
     
-    let newService = new Service(inputWash, inputCut, inputColor);
+    let newService = new Service(inputWash.value, inputCut.value, inputColor.value);
     console.log("newService", newService);
 
     if(isValid(newService)){
         save(newService);  
-}
+    }
 
 }
 
@@ -33,24 +33,28 @@ function isValid(aService){
     let validation = true;
 
 
-    if(aService.wash === ""){
-        isValidWash=false;
-        $("#confirmBooked").css("color", "chocolate").hide();
-    }else{$("#washConfirmBooked").show();
+    if(aService.wash == ""){
+        validation=false;
+        $("#washConfirmBooked").css("color", "chocolate").show();
+        console.log("it is empty");
+    }else{
+        $("#washConfirmBooked").hide();
     }
     
 
-    if(aService.cut === ""){
-        isValidCut=false;
-        $("#confirmBooked").css("color", "chocolate").hide();
-    }else{$("#cutConfirmBooked").show();
+    if(aService.cut == ""){
+        validation=false;
+        $("#cutConfirmBooked").css("color", "red").show();
+    }else{
+        $("#cutConfirmBooked").hide();
     }
     
 
-    if(aService.color === ""){
-        isValidColor=false;    
-        $("#confirmBooked").css("color", "chocolate").hide();
-    }else{$("#colorConfirmBooked").show();
+    if(aService.color == ""){
+        validation=false;    
+        $("#colorConfirmBooked").css("color", "red").show();
+    }else{
+        $("#colorConfirmBooked").hide();
     }
 
 
@@ -64,10 +68,10 @@ function isValid(aService){
 function clearForm(){}
 
 function init(){
-    $("#btnBook").on("click", book);
-    $("#washConfirmBooked").show();
-    $("#cutConfirmBooked").show();
-    $("#colorConfirmBooked").show();
+    $("#btnBook").on("click", selectedServiceReg);
+    $("#washConfirmBooked").hide();
+    $("#cutConfirmBooked").hide();
+    $("#colorConfirmBooked").hide();
 
 }
 
